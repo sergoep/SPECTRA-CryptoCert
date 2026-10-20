@@ -30,3 +30,25 @@ jobs:
 
       - name: Run independent verifier
         run: python verifier/verify.py
+      
+      - name: Run recurrence vs matched-control experiment
+        run: python examples/recurrence_vs_matched_control.py
+
+      - name: Verify recurrence-control benchmark
+        run: |
+          python - <<'PY'
+          from examples.recurrence_vs_matched_control import main
+
+          result = main(n=100, seed=20261021)
+
+          assert result["target_L4_scalar"] == 0xD8, (
+              f'Expected target scalar 0xD8, got {result["target_L4_scalar"]!r}'
+          )
+          assert result["control_L4_scalar_hits"] == 0, (
+              f'Expected 0/100 scalar-fourth-power controls, '
+              f'got {result["control_L4_scalar_hits"]}/100'
+          )
+
+          print("[PASS] target L^4 = 0xD8 I")
+          print("[PASS] recurrence-control benchmark reproduced: 0/100")
+          PY
