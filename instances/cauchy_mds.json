@@ -1,0 +1,1 @@
+{"field":"GF(2^8), AES polynomial 0x11B","matrix_hex":[["CB","52","7B","D1"],["52","CB","D1","7B"],["7B","D1","CB","52"],["D1","7B","52","CB"]],"claims":{"square_scalar":"72","inverse_scalar_multiple":"97","branch_number":5}}

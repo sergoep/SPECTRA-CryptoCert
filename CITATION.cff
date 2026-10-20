@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: SPECTRA-CryptoCert
+type: software
+authors:
+  - family-names: Episkoposian
+    given-names: Sergo A.
+  - family-names: Grigoryan
+    given-names: Svetlana A.
+version: 0.1.0
+message: "If you use this software, please cite this repository and the associated manuscript when available."

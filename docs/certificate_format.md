@@ -1,0 +1,2 @@
+# Certificate format v0.1
+`certificates/preliminary/core_claims.json` records the exact scope of claims checked by v0.1. Future trail certificates must serialize every input/output byte difference at every S-box layer, the linear-layer convention, each DDT multiplicity, total weight, and a hash of the instance definition. A negative certificate must identify the complete decision instance and carry an independently checkable proof object; plain solver logs are insufficient.

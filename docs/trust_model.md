@@ -1,0 +1,2 @@
+# Trust model
+Search is untrusted. Verification is trusted only to the extent of the small checker, the explicit finite-field conventions, and the runtime. A SAT/SMT solver's `UNSAT` message is not by itself a lower-bound certificate. Positive witnesses prove existence only. Global optimality requires an independently checkable infeasibility/lower-bound object covering the complete stated search domain.
