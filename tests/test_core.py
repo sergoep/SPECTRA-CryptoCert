@@ -10,3 +10,7 @@ class TestCore(unittest.TestCase):
  def test_mds(self): self.assertTrue(all_square_minors_nonzero(M)[0])
  def test_ddt(self): self.assertEqual(validate_aes_ddt(ddt())["nonzero_multiplicities"],[2,4])
 if __name__=='__main__':unittest.main()
+
+def test_full_operator_recurrence():
+    from cryptocert.operator import verify_L4
+    assert verify_L4()[0]

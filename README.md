@@ -1,4 +1,4 @@
-# SPECTRA-CryptoCert v0.1
+# SPECTRA-CryptoCert v0.2
 
 Minimal independent verification core accompanying the SPECTRA proposal **Beyond Branch Number: Recurrence-Aware Cryptanalysis and Machine-Certified Verification of Structured MDS Diffusion Layers**.
 
@@ -55,3 +55,12 @@ The proposal plans Apache-2.0 subject to NPUA approval. See `LICENSE-PENDING.md`
 ## Citation
 
 See `CITATION.cff`.
+
+## v0.2 additions (2026-10-21)
+
+1. **Full operator recurrence certificate.** `verifier/verify_operator.py` reconstructs the stated 16-byte shear--mix map and verifies `L^4 = 0xD8 I` on all 16 `GF(2^8)` basis vectors. By linearity this verifies the identity on the full state space.
+2. **Minimal Lean fragment.** `lean/Recurrence.lean` formalizes only the logical four-iterate/projective-return implication. It is intentionally not presented as a formalization of the AES-field computation.
+3. **First recurrence-vs-matched-control pilot.** `examples/recurrence_vs_matched_control.py` compares the target against 100 deterministic non-dyadic 4x4 Cauchy-MDS controls over the same AES field with the identical shear. In this seeded pilot the target has a scalar fourth power and 0/100 controls do. This is a structural pilot, not a security comparison; coefficient multiset and implementation cost are not matched.
+
+### Current claim boundary
+The repository now independently checks the local MDS identities and the full `L^4 = 0xD8 I` recurrence. The manuscript source states that a concrete AES-DDT trail of weight 164 is stored in `value_ddt_trail.json`, but that JSON is not present in the supplied repository materials used to build this release. Therefore v0.2 deliberately does **not** mark the weight-164 witness as independently checked. Global optimality `W_D(4)=164` is also **not established**.

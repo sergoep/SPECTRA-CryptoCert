@@ -1,0 +1,8 @@
+{
+  "seed": 20261021,
+  "controls": 100,
+  "target_L4_scalar": 216,
+  "control_L4_scalar_hits": 0,
+  "matching": "AES field; 4x4 Cauchy-MDS (hence branch number 5); four parallel columns; identical shear",
+  "not_matched": "coefficient multiset and implementation cost"
+}

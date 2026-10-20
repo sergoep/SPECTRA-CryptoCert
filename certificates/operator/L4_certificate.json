@@ -1,0 +1,8 @@
+{
+  "claim": "L^4 = 0xD8 I on GF(2^8)^16",
+  "field_modulus": "0x11B",
+  "byte_order": "row-major 4x4 state",
+  "local_matrix": [["CB","52","7B","D1"],["52","CB","D1","7B"],["7B","D1","CB","52"],["D1","7B","52","CB"]],
+  "shear": "sigma(i,j)=(i,j xor i)",
+  "verification": "verifier/verify_operator.py checks all 16 GF(2^8) basis vectors"
+}
