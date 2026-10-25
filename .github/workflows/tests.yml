@@ -30,7 +30,7 @@ jobs:
 
       - name: Run independent verifier
         run: python verifier/verify.py
-      
+
       - name: Run recurrence vs matched-control experiment
         run: python examples/recurrence_vs_matched_control.py
 
@@ -53,7 +53,7 @@ jobs:
           print("[PASS] recurrence-control benchmark reproduced: 0/100")
           PY
 
-                - name: Install Lean
+      - name: Install Lean
         run: |
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
