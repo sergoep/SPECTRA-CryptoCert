@@ -1,0 +1,22 @@
+{
+  "schema": "spectra-cryptocert-v0.3",
+  "certificate_id": "aes-field-recurrence-L4-0xD8",
+  "claim": {
+    "type": "operator_scalar_power",
+    "power": 4,
+    "scalar_hex": "0xD8",
+    "dimension": 16
+  },
+  "field": {
+    "name": "GF(2^8)",
+    "modulus_hex": "0x11B"
+  },
+  "verification": {
+    "independent_checker": "verifier/verify.py",
+    "required_claim": "L^4 = 0xD8 I"
+  },
+  "scope": {
+    "lean_proves_concrete_gf256_claim": false,
+    "note": "Concrete finite-field computation is checked by the independent Python verifier; Lean checks the recurrence composition layer."
+  }
+}
